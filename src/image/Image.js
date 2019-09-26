@@ -40,6 +40,7 @@ class Image extends React.Component {
       style,
       ImageComponent,
       children,
+      testID,
       ...attributes
     } = this.props;
     const hasImage = Boolean(attributes.source);
@@ -59,7 +60,7 @@ class Image extends React.Component {
               height: style.height,
             },
           ]}
-          testID="RNE__Image"
+          testID={testID ? testID : 'RNE__Image'}
         />
 
         <Animated.View
